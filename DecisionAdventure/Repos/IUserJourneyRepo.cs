@@ -8,7 +8,7 @@ namespace DecisionAdventure.Repos
     public interface IUserJourneyRepo
     {
         Task AddNewUserJourney(Guid ID, string UserName, Guid AdventureID);
-        Task AddAdventureSelection(Guid ID, Guid UserJourneyID, Guid PathID, Guid OptionID);
+        Task AddAdventureSelection(Guid ID, Guid UserJourneyID, Guid PathID, Guid? OptionID);
         Task<List<UserAdventure>> GetAllJourneys();
         Task<UserJourney> GetDecisionTree(Guid userAdventureID);
     }

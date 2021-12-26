@@ -40,7 +40,7 @@ namespace DecisionAdventure.Repos
             }         
         }
 
-        public async Task AddAdventureSelection(Guid ID, Guid UserJourneyID, Guid PathID, Guid OptionID)
+        public async Task AddAdventureSelection(Guid ID, Guid UserJourneyID, Guid PathID, Guid? OptionID)
         {
             using (var conn = _db.GetSqlConnection())
             {

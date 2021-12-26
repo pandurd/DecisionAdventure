@@ -26,6 +26,7 @@ export function AdventureList() {
     }, [])
 
     return <div>
+        <b>Username </b> 
         <input onChange={e => setUser(e.target.value)} value={user} />
         <br />
         <br />

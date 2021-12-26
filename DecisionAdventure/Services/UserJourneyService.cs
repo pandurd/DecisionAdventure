@@ -29,6 +29,10 @@ namespace DecisionAdventure.Services
         {
             await _userJourneyRepo.AddAdventureSelection(Guid.NewGuid(), userJourneyID, currentPathID, selectedOptionID);
             var nextPath = await _adventureRepo.GetNextAdventurePath(adventureID, currentPathID, selectedOptionID);
+            
+            if(nextPath.Options.Count == 0)
+                await _userJourneyRepo.AddAdventureSelection(Guid.NewGuid(), userJourneyID, nextPath.ID, null);
+
             return nextPath;
         }
 
@@ -74,14 +78,17 @@ namespace DecisionAdventure.Services
                         ParentID = answerNode.ID
                     });
 
-                    answerNode.children[0].children.Add(new DecisionTreeNode()
+                    if (item.Label != null)
                     {
-                        ID = item.AnswerID,
-                        IsQuestion = false,
-                        IsSelected = item.IsSelected,
-                        Label = item.Label,
-                        ParentID = item.ID
-                    });
+                        answerNode.children[0].children.Add(new DecisionTreeNode()
+                        {
+                            ID = item.AnswerID,
+                            IsQuestion = false,
+                            IsSelected = item.IsSelected,
+                            Label = item.Label,
+                            ParentID = item.ID
+                        });
+                    }
                 }
             }
             

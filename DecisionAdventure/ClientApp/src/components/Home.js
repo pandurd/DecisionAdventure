@@ -8,8 +8,7 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        Available adventures
-
+        
         <AdventureList /> 
 
         <UserAdventureList /> 

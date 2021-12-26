@@ -13,8 +13,8 @@ export function ShowUserAdventure(props) {
       setTree(advsJson);
     }
 
-    useEffect(async () => {
-      await GetJourneyDetails();
+    useEffect(() => {
+      GetJourneyDetails();
     }, []);
 
     const RenderTree = ({tree}) => {

@@ -1,9 +1,10 @@
 import React, { Component, useEffect, useState } from 'react';
 import { Tree, TreeNode } from 'react-organizational-chart';
-
+import { useHistory } from "react-router-dom";
 
 export function StartAdventure(props) {
     const [tree, setTree] = useState({});
+    const history = useHistory();
 
     const [selectedLevel, setSelectedLevel] = useState([]);
 
@@ -120,6 +121,12 @@ export function StartAdventure(props) {
         });
 
         setTree(newTree);
+
+        if (resJson.options.length === 0) {
+            history.push({
+                pathname: `/showjourney/${journeyID}/${props.match.params.adventureName}`
+            })
+        }
         
     }
 
@@ -138,7 +145,11 @@ export function StartAdventure(props) {
       if(!tree)
         return '';
 
-      return <TreeNode   label={<div onClick={() => handleClick(tree)}>{tree.label}</div>}>
+        let nodeClassName = '';
+
+        if (tree.isQuestion)
+            nodeClassName = nodeClassName + ' question';
+        return <TreeNode label={<div className={nodeClassName} onClick={() => handleClick(tree)}>{tree.label}</div>}>
         { tree.children && tree.children.map((element, index) => {
           return <RenderTree tree={element} />
         })}
