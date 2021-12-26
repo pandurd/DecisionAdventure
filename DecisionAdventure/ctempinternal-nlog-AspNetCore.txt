@@ -1,0 +1,4 @@
+2021-12-26 18:01:49.0562 Info Message Template Auto Format enabled
+2021-12-26 18:01:49.0683 Info Loading assembly: NLog.Web.AspNetCore
+2021-12-26 18:01:49.0896 Info Adding target ConsoleTarget(Name=lifetimeConsole)
+2021-12-26 18:01:49.1183 Info Validating config: TargetNames=lifetimeConsole, ConfigItems=6, FilePath=/app/bin/Debug/net5.0/NLog.config

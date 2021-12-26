@@ -1,0 +1,25 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.Selected {
+  background-color: yellow;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 5px;
+}
+
+.question {
+    text-decoration: underline;
+}
