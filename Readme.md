@@ -90,7 +90,8 @@ once choosen, more questions will be displayed.
 
 # Decision Tree
 Once final question/path is reached user will be redirected to a decision page (readonly) where no click can be done or no more answers cna be choosen. <br />
-
+<br />
+Selected answers will be highlighted in yellow 
   <br /> <strong>Decision Tree</strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/LastQuestion-DecisonTree.jpg)
 
