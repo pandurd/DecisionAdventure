@@ -73,7 +73,7 @@ namespace DecisionAdventure.Repos
                             ";
                     var adventure = await conn.QueryFirstAsync<UserAdventure>(getAdventureQuery, new { userJourneyID });
 
-                    result.Adventure = adventure;
+                    //result.Adventure = adventure;
 
                     var getChoosenOptions = @"SELECT
 	                                   ap.ID

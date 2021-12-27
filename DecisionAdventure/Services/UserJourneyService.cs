@@ -50,7 +50,7 @@ namespace DecisionAdventure.Services
 
             foreach (var item in result.PathOptions)
             {
-                var parentNode = SearchTree(root, item.ParentID, item.PreviousAnswer);
+                var parentNode = SearchTree(root, item.ParentID);
 
                 if (parentNode != null)
                 {
@@ -67,7 +67,7 @@ namespace DecisionAdventure.Services
                 }
                 else
                 {
-                    var answerNode = SearchTree(root, item.PreviousAnswer, item.PreviousAnswer);
+                    var answerNode = SearchTree(root, item.PreviousAnswer);
 
                     answerNode.children.Add(new DecisionTreeNode()
                     {
@@ -101,7 +101,7 @@ namespace DecisionAdventure.Services
             return result;
         }
 
-        private DecisionTreeNode SearchTree(DecisionTreeNode tree, Guid ParentID, Guid? PreviousID)
+        private DecisionTreeNode SearchTree(DecisionTreeNode tree, Guid ParentID)
         {
             DecisionTreeNode result = null;
 
@@ -112,7 +112,7 @@ namespace DecisionAdventure.Services
             {
                 for (int i = 0; result == null && i < tree.children.Count; i++)
                 {
-                    result = SearchTree(tree.children[i], ParentID, PreviousID);
+                    result = SearchTree(tree.children[i], ParentID);
                 }
             }
 
