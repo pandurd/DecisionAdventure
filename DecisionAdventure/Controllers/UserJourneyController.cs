@@ -24,6 +24,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("start")]
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> StartJourney(StartRequest startRequest)
         {
             if (!ModelState.IsValid)
@@ -47,6 +51,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("selectstep")]
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> SaveSelectedStep(SaveStepRequest saveStepRequest)
         {
             if (saveStepRequest.selectedOptionID == Guid.Empty
@@ -69,6 +77,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("journeys")]
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> GetAllJourneys()
         {
             try
@@ -85,6 +97,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("decisiontree")]
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> GetDecisionTree(Guid userJourneyID)
         {
             if (userJourneyID == Guid.Empty)

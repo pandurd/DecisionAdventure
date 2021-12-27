@@ -23,6 +23,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("create")]
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> CreateAdventure(Adventure adv)
         {
             if (!ModelState.IsValid)
@@ -45,6 +49,9 @@ namespace DecisionAdventure.Controllers
 
         [Route("addpath")]
         [HttpPost]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         public async Task<IActionResult> AddAdventurePath(AdventurePath path)
         {
             if (string.IsNullOrEmpty(path.Question) || path.ID == Guid.Empty)
@@ -67,6 +74,10 @@ namespace DecisionAdventure.Controllers
 
         [Route("getall")]
         [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Produces("application/json")]
         public async Task<IActionResult> GetAdventures()
         {
             try
