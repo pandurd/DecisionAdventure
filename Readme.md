@@ -33,25 +33,28 @@ Show decision tree will show selected options highlighted in yellow color <br />
 
 # Demo
 
-# Creating
+# Creating Adventure (Designing)
 
 Once app is started, app home screen list all available adventures and list of adventures taken by user (username input field is given to differntiate multiple runs/user)
 <br />
-List page
+
+<strong>List page </<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/ListOfAdventure%20and%20List%20of%20taken.jpg) 
 
 To create adventure, click on create adventure button on top right nav
 <br />
 
 Provide a name for adventure and click create. User will be redirected to another create adventure page
-
+<strong>Create Adventure Page</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/CreateAdventure%20-1.jpg)
 
 A tree is shown with adventure name in root name.
 <br />
+ <strong>Create Adventure Decision tree Page</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/CreateAdventure%20-2.jpg)
 
 User have to add first question now by clicking add button
+  <strong>Add question/Answer dialog</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/CreateAdventure%20-%20AddQuestionwithAnswers.jpg)
 
 Once user entre question, adds multiple answers if needed then click confirm
@@ -65,7 +68,7 @@ Add more questions for more paths,
 
 
 Add leaf decision as Question without any answers(leave the answers empty) as below
-
+<strong>Last Decision</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-%20LastQuestion.jpg)
  
 
@@ -78,6 +81,7 @@ Question will be underlined. Answrs will not be underlined. Clicking only enable
 
 example new start, <br />
 First question will be displayed <br />
+ <strong>Start adventure path</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-1.jpg)
 
 User can choose answers. <br />
@@ -87,9 +91,11 @@ once choosen, more questions will be displayed.
 # Decision Tree
 Once final question/path is reached user will be redirected to a decision page (readonly) where no click can be done or no more answers cna be choosen. <br />
 
+  <strong>Decision Tree</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/LastQuestion-DecisonTree.jpg)
 
 User can also see past adventures from home page (2nd listing)
+   <strong>List Page</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/ListOfTakenUpdatedAfterLastQuestion.jpg)
 
 # API
@@ -102,6 +108,7 @@ Entity framework/Ado.net is also nice to have but dapper is more efficient <br /
 Please see DB diagram in root folder for table deisgns and all scripts are in DBSCripts folder inside Decison Adventure folder <br />
 Azure DB is connected via Connection string hardcoded <br />
 
+   <strong>DB Diagram</<strong>
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DBDiagram.jpg) 
 
 #  Tests
