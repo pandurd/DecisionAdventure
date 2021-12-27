@@ -68,7 +68,7 @@ Add more questions for more paths,
 
 
 Add leaf decision as Question without any answers(leave the answers empty) as below
- <br /><strong>Last Decision</strong>
+ <br /><strong>Leaf Decision</strong><br />
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-%20LastQuestion.jpg)
  
 
