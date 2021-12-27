@@ -86,7 +86,7 @@ First question will be displayed <br />
 
 User can choose answers. <br />
 once choosen, more questions will be displayed.
-![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-2.jpgg)
+![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-2.jpg)
 
 # Decision Tree
 Once final question/path is reached user will be redirected to a decision page (readonly) where no click can be done or no more answers cna be choosen. <br />
