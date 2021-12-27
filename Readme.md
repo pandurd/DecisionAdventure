@@ -13,8 +13,10 @@ docker run -d -p 5050:80 decisionadventure:latest
 
 Swagger Docker URL : http://localhost:5050/swagger/index.html   
 
+![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/Swagger.jpg)
+
 # UI
-Used basic reat UI to do minium code which utilizes API and does all functionalities  <br />
+Used basic react UI to do minium code which utilizes API for following functionalities  <br />
 
 1. Create/Design Adventure <br />
 2. Take Adventure <br />
@@ -33,7 +35,7 @@ Show decision tree will show selected options highlighted in yellow color <br />
 
 # Creating
 
-Once app started,  app home screen list all available adventures and list of adventures taken by user (username input field is given to differntiate multiple runs/user)
+Once app is started, app home screen list all available adventures and list of adventures taken by user (username input field is given to differntiate multiple runs/user)
 <br />
 List page
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/ListOfAdventure%20and%20List%20of%20taken.jpg) 
@@ -78,28 +80,23 @@ example new start, <br />
 First question will be displayed <br />
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-1.jpg)
 
-User can choose answers.
-
+User can choose answers. <br />
 once choosen, more questions will be displayed.
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/StartAdventure%20-2.jpgg)
 
 # Decision Tree
-Once final question/path is reached- user will be redirected to a decision page (readonly) where no click can be done or no more answers cna be choosen. <br />
+Once final question/path is reached user will be redirected to a decision page (readonly) where no click can be done or no more answers cna be choosen. <br />
 
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/LastQuestion-DecisonTree.jpg)
 
 User can also see past adventures from home page (2nd listing)
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/ListOfTakenUpdatedAfterLastQuestion.jpg)
 
-
-
-
 # API
 Web api is used with Dapper for DB queries <br />
 Added inline queries as much as possible to finish faster. <br />
 Added a one store proc as one example to calll store procs via dapper <br />
 Entity framework/Ado.net is also nice to have but dapper is more efficient <br />
-
 
 # DB
 Please see DB diagram in root folder for table deisgns and all scripts are in DBSCripts folder inside Decison Adventure folder <br />
