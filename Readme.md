@@ -15,6 +15,9 @@ Swagger Docker URL : http://localhost:5050/swagger/index.html
 
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/Swagger.jpg)
 
+Hosted in Azure k8s - URL: http://20.203.226.66/
+Swagger url for Azure k8s - http://20.203.226.66/swagger/index.html
+
 # UI
 Used basic react UI to do minium code which utilizes API for following functionalities  <br />
 
@@ -100,7 +103,7 @@ User can also see past adventures from home page (2nd listing)
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/ListOfTakenUpdatedAfterLastQuestion.jpg)
 
 # API
-Web api is used with Dapper for DB queries <br />
+.Net core 5 - Web api is used with Dapper for DB queries <br />
 Added inline queries as much as possible to finish faster. <br />
 Added a one store proc as one example to calll store procs via dapper <br />
 Entity framework/Ado.net is also nice to have but dapper is more efficient <br />
