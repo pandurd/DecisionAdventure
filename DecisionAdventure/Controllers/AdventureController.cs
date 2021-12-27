@@ -25,7 +25,7 @@ namespace DecisionAdventure.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAdventure(Adventure adv)
         {
-            if (string.IsNullOrEmpty(adv.Name))
+            if (!ModelState.IsValid)
             {
                 _logger.LogError("Adventure object is not valid", adv);
                 return BadRequest("Name should be empty");

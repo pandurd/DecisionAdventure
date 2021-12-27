@@ -26,7 +26,7 @@ namespace DecisionAdventure.Controllers
         [HttpPost]
         public async Task<IActionResult> StartJourney(StartRequest startRequest)
         {
-            if (startRequest.ID == Guid.Empty || string.IsNullOrEmpty(startRequest.Name))
+            if (!ModelState.IsValid)
             {
                 _logger.LogError("Request does not have all properties");
                 return BadRequest("Request does not have all properties");
@@ -49,7 +49,7 @@ namespace DecisionAdventure.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveSelectedStep(SaveStepRequest saveStepRequest)
         {
-            if (saveStepRequest.selectedOptionID == Guid.Empty 
+            if (saveStepRequest.selectedOptionID == Guid.Empty
                 || saveStepRequest.currentPathID == Guid.Empty
                 || saveStepRequest.adventureID == Guid.Empty
                 || saveStepRequest.userJourneyID == Guid.Empty)

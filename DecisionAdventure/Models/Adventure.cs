@@ -8,8 +8,9 @@ namespace DecisionAdventure.Models
 {
     public class Adventure
     {
-        [Required]
         public Guid ID { get; set; }
+
+        [Required]
         public string Name { get; set; }
     }
 }

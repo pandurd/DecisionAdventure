@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace DecisionAdventure.Models
 {
     public class UserJourney
     {
-        //public UserAdventure Adventure { get; set; }
         public List<UserJourneyPath> PathOptions { get; set; }
     }
 

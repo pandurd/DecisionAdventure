@@ -17,11 +17,11 @@ namespace DecisionAdventure.Providers
         public SqlConnection GetSqlConnection()
         {
             //Should be injected via env variable
-            var connectionString = $"Server=localhost\\SQLEXPRESS;Database=Adventure;Trusted_Connection=True;TrustServerCertificate=True";
+            //var connectionString = $"Server=localhost\\SQLEXPRESS;Database=Adventure;Trusted_Connection=True;TrustServerCertificate=True";
             //for github
             var encodedPassword = "UGFzc3dvcmQx";
             var decodedPassword = Encoding.UTF8.GetString(Convert.FromBase64String(encodedPassword));
-            //var connectionString = $"Server=tcp:advinterview.database.windows.net,1433;Initial Catalog=adventure;Persist Security Info=False;User ID=dev;Password={decodedPassword};MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;Connection Timeout=30;";
+            var connectionString = $"Server=tcp:advinterview.database.windows.net,1433;Initial Catalog=adventure;Persist Security Info=False;User ID=dev;Password={decodedPassword};MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;Connection Timeout=30;";
             
             var connection = new SqlConnection(connectionString);
 

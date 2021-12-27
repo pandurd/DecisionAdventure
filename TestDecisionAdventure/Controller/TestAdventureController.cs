@@ -47,12 +47,12 @@ namespace TestDecisionAdventure.Controller
             var mockLogger = new Mock<ILogger<AdventureController>>();
             var adventureController = new AdventureController(mockService.Object, mockLogger.Object);
 
-            // Act
-            mockService.VerifyNoOtherCalls();
+            // Act 
             var result = await adventureController.AddAdventurePath(req);
-            var model = Assert.IsAssignableFrom<ObjectResult>(result);
 
             // Assert
+            var model = Assert.IsAssignableFrom<ObjectResult>(result);
+            mockService.VerifyNoOtherCalls();
             Assert.Equal(400, model.StatusCode);
         }
 
