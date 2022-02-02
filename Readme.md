@@ -15,8 +15,6 @@ Swagger Docker URL : http://localhost:5050/swagger/index.html
 
 ![name-of-you-image](https://github.com/pandurd/DecisionAdventure/raw/master/DemoScreenshots/Swagger.jpg)
 
-Hosted in Azure k8s - URL: http://20.203.226.66/
-Swagger url for Azure k8s - http://20.203.226.66/swagger/index.html
 
 # UI
 Used basic react UI to do minium code which utilizes API for following functionalities  <br />
